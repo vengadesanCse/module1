@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee form</h1>
+    <form>
+        <label>Enter your name:</label>
+        <input type="text" maxlength="100">
+        <br><br>
+        <label>Enter your department:</label>
+        <input type="text" maxlength="100">
+        <br><br>
+        <label>Tell us a little about yourself:</label>
+        <textarea cols="12" rows="5" maxlength="100"></textarea>
+        <br><br>
+        <label>Do you exercise at home?</label>
+        <input type="radio" id="exerciseYes" name="exercise" value="yes">
+        <label for="exerciseYes">Yes</label>
+        <input type="radio" id="exerciseNo" name="exercise" value="no">
+        <label for="exerciseNo">No</label>
+        <br><br>
+        <label>How do you like to read about your favorite topics?</label>
+        <br><br>
+        <input type="checkbox" id="books" name="readingPreference" value="Books">
+        <label for="books">Books</label>
+        <input type="checkbox" id="onlineResources" name="readingPreference" value="Online Resources">
+        <label for="onlineResources">Online Resources</label>
+        <input type="checkbox" id="phoneApps" name="readingPreference" value="Phone Apps">
+        <label for="phoneApps">Phone Apps</label>
+        <input type="checkbox" id="magazines" name="readingPreference" value="Magazines">
+        <label for="magazines">Magazines</label>
+        <br><br>
+        <label>What genre of movies do you like?</label>
+        <select>
+            <option value="comedy">Comedy</option>
+            <option value="love">Love</option>
+            <option value="action">Action</option>
+        </select>
+        <br><br>
+        <button>Submit</button>
+    </form>
+
+    <script>
+
+        function startColorChange() {
+                intervalId = setInterval(changeBackgroundColor, 1000); 
+
+        }
+
+        function changeBackgroundColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+
+            document.body.style.backgroundColor = rgb(${r}, ${g}, ${b});
+        }
+        changeBackgroundColor() 
+        startColorChange()
+    </script>
+</body>
+</html>
